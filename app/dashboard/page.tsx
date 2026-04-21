@@ -1,12 +1,12 @@
-import { KeyRoundIcon, Lock, Shield } from "lucide-react";
+import { KeyRoundIcon, Lock, Shield, CloudUpload, NotepadText, Laptop } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function page() {
   return (
-    <div className="">
+    <div>
       {/* Navbar */}
-      <div className="border border-gray-300 rounded-l p-5 flex flex-col">
+      <div className="bg-gray-200 border border-gray-300 rounded-l p-5 flex flex-col">
         <div className="flex flex-row justify-between">
           <h2 className="text-4xl font-bold px-30">Logo</h2>
           <div>
@@ -38,7 +38,7 @@ export default function page() {
         </div>
       </div>
       {/* Hero */}
-      <div className="flex items-center justify-center content-center border border-gray-300 rounded-1 p-5 bg-gray-100">
+      <div className="flex items-center justify-center content-center border border-gray-300 rounded-1 p-5 bg-gray-200">
         {/* Get Started */}
         <div>
           <p className="text-4xl font-bold">Build Something Amazing</p>
@@ -62,8 +62,9 @@ export default function page() {
         </div>
       </div>
       {/* Features */}
-      <div className="flex items-center justify-center content-center rounded-1 p-5 bg-gray-100">
-        <div>
+      <div className="flex items-center justify-center content-center border border-gray-300 rounded-1 p-5 bg-gray-200">
+        <div className="flex flex-row gap-100">
+          <div>
           <p className="text-4xl font-bold my-4">Advanced Security Features</p>
           <p className="text-[22px] my-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br></br>sed
@@ -82,13 +83,50 @@ export default function page() {
               <Shield className="m-2 text-indigo-500" /> Permission Control
             </button>
           </div>
+          </div>
           <div className="grid grid-flow-col grid-rows-3 gap-4">
-            <div>Feature 1</div>
-            <div>Feature 2</div>
-            <div>Feature 3</div>
-            <div>Feature 4</div>
-            <div>Feature 5</div>
-            <div>Feature 6</div>
+            <div className="flex flex-row bg-white rounded-xl p-8">
+              <Shield className="bg-gray-300 border-gray-300 m-2 text-indigo-500 w-8 h-8" />
+              <div>
+                <p className="text-xl font-bold">Feature One</p><br></br>
+                <p>Short description here.</p>
+              </div>
+            </div>
+            <div className="flex flex-row bg-white rounded-xl p-8">
+              <Lock className="bg-gray-300 border-gray-300 m-2 text-indigo-500 w-8 h-8" />
+              <div>
+                <p className="text-xl font-bold">Feature Three</p><br></br>
+                <p>Short description here.</p>
+              </div>
+            </div>
+            <div className="flex flex-row bg-white rounded-xl p-8">
+              <CloudUpload className="bg-gray-300 border-gray-300 m-2 text-indigo-500 w-8 h-8" />
+              <div>
+                <p className="text-xl font-bold">Feature Five</p><br></br>
+                <p>Short description here.</p>
+              </div>
+            </div>
+            <div className="flex flex-row bg-white rounded-xl p-8">
+              <KeyRoundIcon className="bg-gray-300 border-gray-300 m-2 text-indigo-500 w-8 h-8" />
+              <div>
+                <p className="text-xl font-bold">Feature Two</p><br></br>
+                <p>Short description here.</p>
+              </div>
+            </div>
+            <div className="flex flex-row bg-white rounded-xl p-8">
+              <Laptop className="bg-gray-300 border-gray-300 m-2 text-indigo-500 w-8 h-8" />
+              <div>
+                <p className="text-xl font-bold">Feature Four</p><br></br>
+                <p>Short description here.</p>
+              </div>
+            </div>
+            <div className="flex flex-row bg-white rounded-xl p-8">
+              <NotepadText className="bg-gray-300 border-gray-300 m-2 text-indigo-500 w-8 h-8" />
+              <div>
+                <p className="text-xl font-bold">Feature Six</p><br></br>
+                <p>Short description here.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
