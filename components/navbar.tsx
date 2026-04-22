@@ -1,37 +1,39 @@
 import Link from "next/link";
 
-export default function navbar() {
+const Navbar = () => {
   return (
-    <div className="border border-gray-300 rounded-l p-4 flex flex-col">
-      <div>
-        <h2 className="text-4xl font-bold mx-20">Logo</h2>
-      </div>
-      <div>
-        <Link
-          href="/dashboard"
-          className="hover:bg-indigo-500 hover:text-white p-3 rounded-l"
-        >
-          Home
-        </Link>
-        <Link
-          href="/dashboard"
-          className="hover:bg-indigo-500 hover:text-white p-3 rounded-l"
-        >
-          About
-        </Link>
-        <Link
-          href="/dashboard"
-          className="hover:bg-indigo-500 hover:text-white p-3 rounded-l"
-        >
-          Contact
-        </Link>
-        <Link
-          href="/dashboard"
-          className="hover:bg-indigo-500 hover:text-white p-3 rounded-l"
-        >
-          Login
-        </Link>
+    <div className="flex flex-col items-center border border-gray-200 bg-white rounded-xl p-8">
+      <div className="flex flex-row justify-between space-x-180">
+        <h2 className="text-4xl font-bold pr-6">Logo</h2>
+        <div className="justify-center space-x-9 mt-2">
+          <Link
+            href="/dashboard"
+            className="hover:bg-indigo-500 hover:text-white p-3 rounded-xl"
+          >
+            Home
+          </Link>
+          <Link
+            href="/dashboard"
+            className="hover:bg-indigo-500 hover:text-white p-3 rounded-xl"
+          >
+            About
+          </Link>
+          <Link
+            href="/dashboard"
+            className="hover:bg-indigo-500 hover:text-white p-3 rounded-xl"
+          >
+            Contact
+          </Link>
+          <Link
+            href="/dashboard"
+            className="hover:bg-indigo-500 hover:text-white p-3 rounded-xl"
+          >
+            Login
+          </Link>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;
