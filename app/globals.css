@@ -10,6 +10,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-mobile-sm: 320px;
+  --breakpoint-mobile: 375px;
+  --breakpoint-mobile-lg: 425px;
+  --breakpoint-desktop: 160rem;
+  --breakpoint-tablet: 767px;
 }
 
 @media() {
