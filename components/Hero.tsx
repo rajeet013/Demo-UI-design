@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col pl-20 sm:pl-10 md:items-center md:justify-center md:p-20 bg-slate-50 md:flex-row md:space-x-15">
+    <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-12">
       {/* Get Started */}
-      <div className="my-4 max-w-xl">
-        <p className="text-6xl my-4 sm:text-6xl sm:my-4 md:text-4xl font-bold md:my-4 md:max-w-xl">
+      <div className="text-center md:text-left">
+        <p className="text-4xl md:text-6xl font-bold">
           Build Something Amazing
         </p>
-        <p className="text-[45px] sm:text-[45px] md:text-[22px]">
+        <p className="text-lg md:text-xl">
           Start your journey with our platform.
         </p>
         <button
