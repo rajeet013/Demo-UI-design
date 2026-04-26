@@ -2,7 +2,7 @@ import { KeyRoundIcon, Laptop, Lock, NotepadText, Shield } from "lucide-react";
 
 export default function Six_features_md() {
   return (
-    <div className="grid grid-cols-2 gap-4 w-80 h-80 items-center sm:gap-4 sm:w-140 sm:h-80 md:w-140 md:h-80 sm:justify-center mt-5 sm:-mt-10 md:-mt-10 md:mr-40 md:p-1">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl mt-5 lg:mt-0">
       <div className="flex flex-row bg-background text-foreground rounded-xl p-4 border border-border">
         <div className="flex items-center justify-center w-10 h-10 bg-border rounded-lg">
           <Shield className="text-indigo-500 w-6 h-6" />
