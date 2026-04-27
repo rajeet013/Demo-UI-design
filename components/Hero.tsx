@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto py-8">
+    <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
       {/* Get Started */}
-      <div className="text-center md:text-left px-8">
+      <div className="text-center md:text-left">
         <p className="text-4xl md:text-6xl font-bold">
           Build Something Amazing
         </p>
@@ -25,7 +25,7 @@ export default function Hero() {
           alt="Developer"
           width={800}
           height={600}
-          className="w-full h-60 sm:w-full sm:h-80 md:w-full md:h-100"
+          className="w-full h-80 md:h-100 p-4"
         />
       </div>
     </div>

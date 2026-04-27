@@ -1,3 +1,4 @@
+import { navLinks } from "@/constants";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
@@ -8,44 +9,41 @@ interface Props {
 }
 
 export default function Hamburger({ setIsOpen, isOpen, toggle }: Props) {
-  // Use 'toggle' here
   return (
     <div className="md:hidden">
-      <button onClick={toggle} className="p-2 hover:cursor-pointer">
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
+      <button
+        onClick={toggle}
+        className="flex items-center justify-center p-2 hover:cursor-pointer"
+      >
+        <X
+          size={24}
+          className={`transition ${isOpen ? "opacity-100 scale-100 h-auto w-auto" : "opacity-0 scale-0 h-0 w-0"}`}
+        />
+
+        <Menu
+          size={24}
+          className={`transition ${isOpen ? "opacity-0 scale-0 h-0 w-0" : "opacity-100 scale-100 h-auto w-auto"}`}
+        />
       </button>
-      {isOpen && (
-        <div className="md:hidden flex flex-col mt-6 space-y-2 border-t border-border pt-5">
+
+      <div
+        className={`flex flex-col absolute bg-background right-3.5 top-10 mt-2 border border-gray-400 rounded-xl items-center w-40 transition-all duration-100 origin-top-left ${
+          isOpen
+            ? "opacity-100 scale-100 translate-y-0"
+            : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+        }`}
+      >
+        {navLinks.map((item) => (
           <Link
-            href="/dashboard"
+            key={item.title}
+            href={item.href}
             onClick={() => setIsOpen(false)}
-            className="hover:bg-indigo-500 hover:text-white p-4 rounded-xl"
+            className="p-4 transition-colors hover:text-foreground hover:-translate-y-1 hover:scale-120"
           >
-            Home
+            {item.title}
           </Link>
-          <Link
-            href="/dashboard"
-            onClick={() => setIsOpen(false)}
-            className="hover:bg-indigo-500 hover:text-white p-4 rounded-xl"
-          >
-            About
-          </Link>
-          <Link
-            href="/dashboard"
-            onClick={() => setIsOpen(false)}
-            className="hover:bg-indigo-500 hover:text-white p-4 rounded-xl"
-          >
-            Contact
-          </Link>
-          <Link
-            href="/dashboard"
-            onClick={() => setIsOpen(false)}
-            className="hover:bg-indigo-500 hover:text-white p-4 rounded-xl"
-          >
-            Login
-          </Link>
-        </div>
-      )}
+        ))}
+      </div>
     </div>
   );
 }
